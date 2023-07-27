@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Frag_plantInfo">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        tools:context=".Plant_Info">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="4dp"
+            tools:layout_editor_absoluteY="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spnrSelectPlant"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="90" />
+
+                <ImageView
+                    android:id="@+id/imgSettingsAddPlants"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    app:srcCompat="@drawable/plus" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/arrowPrevious"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/arrowback" />
+
+                <Button
+                    android:id="@+id/btnPrevious"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00FFFFFF"
+                    android:fontFamily="@font/finger_paint"
+                    android:gravity="left|center_vertical"
+                    android:paddingLeft="5sp"
+                    android:text="Previous"
+                    android:textColor="@color/colorTitleText"
+                    android:textSize="22sp" />
+
+                <Button
+                    android:id="@+id/btnNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#00FFFFFF"
+                    android:fontFamily="@font/finger_paint"
+                    android:gravity="center|right|center_vertical"
+                    android:paddingLeft="5sp"
+                    android:text="@string/next"
+                    android:textColor="@color/colorTitleText"
+                    android:textSize="22sp" />
+
+                <ImageView
+                    android:id="@+id/arrowNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/arrowforward" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="30"
+                android:background="@color/colorPrimaryLight"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:background="@color/colorAccentBrown"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imgCrop"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:layout_weight="50"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/startmenu_background_plant" />
+
+                    <TableLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_weight="50"
+                        android:background="@color/colorAccentBrown">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="33">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="5dp"
+                                android:layout_weight="50"
+                                android:fontFamily="@font/finger_paint"
+                                android:gravity="center|right"
+                                android:text="Seasons"
+                                android:textColor="@color/colorTitleText"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtSeasons"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="50"
+                                android:fontFamily="sans-serif"
+                                android:text="---"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorTitleText"
+                                android:textSize="13sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="33">
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="5dp"
+                                android:layout_weight="50"
+                                android:fontFamily="@font/finger_paint"
+                                android:gravity="center|right"
+                                android:text="Seed Indoors"
+                                android:textColor="@color/colorTitleText"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtSeedIndoors"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="50"
+                                android:fontFamily="sans-serif"
+                                android:text="---"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorTitleText"
+                                android:textSize="13sp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="33">
+
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_margin="5dp"
+                                android:layout_weight="50"
+                                android:fontFamily="@font/finger_paint"
+                                android:gravity="center|right"
+                                android:text="Weeks To Harvest"
+                                android:textColor="@color/colorTitleText"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txtWeeksToHarvest"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="50"
+                                android:fontFamily="sans-serif"
+                                android:text="---"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorTitleText"
+                                android:textSize="13sp" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="60"
+                android:background="@color/colorPrimaryLight"
+                android:orientation="horizontal">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:background="@color/colorAccentBrown">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="50"
+                                    android:fontFamily="@font/finger_paint"
+                                    android:text="General"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorTitleText"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="33">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="50"
+                                    android:fontFamily="@font/finger_paint"
+                                    android:gravity="center|right"
+                                    android:text="Seed Company"
+                                    android:textColor="@color/colorTitleText"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txtSeedCompany"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="50"
+                                    android:fontFamily="sans-serif"
+                                    android:text="---"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorTitleText"
+                                    android:textSize="18sp" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="50"
+                                    android:fontFamily="@font/finger_paint"
+                                    android:text="Planting Dates"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorTitleText"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="33">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="50"
+                                    android:fontFamily="@font/finger_paint"
+                                    android:gravity="center|right"
+                                    android:text="First Plant Date"
+                                    android:textColor="@color/colorTitleText"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txtFirstPlantDate"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="50"
+                                    android:fontFamily="sans-serif"
+                                    android:text="---"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorTitleText"
+                                    android:textSize="18sp" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="33">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="50"
+                                    android:fontFamily="@font/finger_paint"
+                                    android:gravity="center|right"
+                                    android:text="Last Plant Date"
+                                    android:textColor="@color/colorTitleText"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txtLastPlantDate"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="50"
+                                    android:fontFamily="sans-serif"
+                                    android:text="---"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorTitleText"
+                                    android:textSize="18sp" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="33">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="50"
+                                    android:fontFamily="@font/finger_paint"
+                                    android:gravity="center|right"
+                                    android:text="Seed Indoors Date"
+                                    android:textColor="@color/colorTitleText"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txtSeedIndoorsDate"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="50"
+                                    android:fontFamily="sans-serif"
+                                    android:text="---"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorTitleText"
+                                    android:textSize="18sp" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="33">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="50"
+                                    android:fontFamily="@font/finger_paint"
+                                    android:gravity="center|right"
+                                    android:text="Harvest Range"
+                                    android:textColor="@color/colorTitleText"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txtHarvestRange"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="50"
+                                    android:fontFamily="sans-serif"
+                                    android:text="---"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorTitleText"
+                                    android:textSize="18sp" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="50"
+                                    android:fontFamily="@font/finger_paint"
+                                    android:text="Planting Layout"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorTitleText"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="33">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="50"
+                                    android:fontFamily="@font/finger_paint"
+                                    android:gravity="center|right"
+                                    android:text="Seed Distance (in)"
+                                    android:textColor="@color/colorTitleText"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txtSeedDistance"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="50"
+                                    android:fontFamily="sans-serif"
+                                    android:text="---"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorTitleText"
+                                    android:textSize="18sp" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="33">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="50"
+                                    android:fontFamily="@font/finger_paint"
+                                    android:gravity="center|right"
+                                    android:text="Seed Depth (in)"
+                                    android:textColor="@color/colorTitleText"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txtSeedDepth"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="50"
+                                    android:fontFamily="sans-serif"
+                                    android:text="---"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorTitleText"
+                                    android:textSize="18sp" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="33">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_margin="5dp"
+                                    android:layout_weight="50"
+                                    android:fontFamily="@font/finger_paint"
+                                    android:gravity="center|right"
+                                    android:text="Method"
+                                    android:textColor="@color/colorTitleText"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/txtMethod"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="50"
+                                    android:fontFamily="sans-serif"
+                                    android:text="---"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorTitleText"
+                                    android:textSize="18sp" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="50"
+                                    android:fontFamily="@font/finger_paint"
+                                    android:text="Notes"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorTitleText"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="33">
+
+                                <TextView
+                                    android:id="@+id/txtNotes"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="50"
+                                    android:fontFamily="sans-serif"
+                                    android:text="---"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorTitleText"
+                                    android:textSize="18sp" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:gravity="center">
+
+                            </TableRow>
+
+                        </TableLayout>
+
+<!--                        <Button-->
+<!--                            android:id="@+id/btnSharePlant"-->
+<!--                            android:layout_width="match_parent"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:background="#00FFFFFF"-->
+<!--                            android:fontFamily="@font/finger_paint"-->
+<!--                            android:text="Share Plant via Bluetooth"-->
+<!--                            android:textColor="@color/colorTitleText"-->
+<!--                            android:textSize="24sp" />-->
+
+                        <Button
+                            android:id="@+id/btnDelete"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#00FFFFFF"
+                            android:fontFamily="@font/finger_paint"
+                            android:text="Delete Plant"
+                            android:textColor="@android:color/holo_red_dark"
+                            android:textSize="40sp" />
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+
+<!--            <com.google.android.gms.ads.AdView-->
+<!--                android:id="@+id/adView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_gravity="center"-->
+<!--                app:adSize="BANNER"-->
+<!--                app:adUnitId="ca-app-pub-7390442478171234/7374031718"></com.google.android.gms.ads.AdView>-->
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

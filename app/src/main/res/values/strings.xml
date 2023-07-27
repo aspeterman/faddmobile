@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Plannter</string>
+    <string name="background_color_for_the_start_menu">background Color for the start menu</string>
+
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+    <string name="plant">Plant</string>
+    <string name="save">Save</string>
+    <string name="harvest">Harvest</string>
+    <string name="plant_log">Plant Log</string>
+    <string name="plant_date">Plant By Date</string>
+    <string name="crop_info">Crop Info</string>
+    <string name="btn_Back">Back</string>
+    <string name="you_can_plant_harvest_the_following_crops_on">You can Plant/Harvest the following crops on</string>
+    <string name="ChangeFrostDates">Change Frost Dates:</string>
+
+</resources>
